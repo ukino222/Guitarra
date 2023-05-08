@@ -19,6 +19,7 @@ body {
     background-image: linear-gradient(to right, rgb(28, 28, 42) , rgb(34, 34, 34));
     /* background-image: linear-gradient(to right, rgb(51, 51, 51) , rgb(34, 34, 34)); */
     /* background-color: rgb(65, 65, 65); */
+    color: white;
 }
 
 .guitarra{
@@ -46,6 +47,16 @@ header {
     backdrop-filter: blur(0.3rem);
 }
 
+section {
+    font-family: 'Nova Square', cursive;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.cuerpo-principal {
+    margin-top: 7em;
+    margin-left: 2em;
+}
 #presentacion {   
     background-image: url(../imagenes/guitarra-header.jpg);
     width: 100%;
@@ -148,18 +159,6 @@ header .contenedor {
     padding: 0 1.8em;
 }
 
-
-
-section {
-    width: 100%;
-    margin-bottom: 25px;
-}
-
-.cuerpo-principal {
-    margin-top: 7em;
-    margin-left: 2em;
-}
-
 .section-gris{
     background-image: linear-gradient(to right, rgb(236, 207, 109) , rgb(83, 63, 6));
     /* background-color: rgb(231, 202, 121); */
@@ -179,6 +178,7 @@ section {
     padding: 0.7rem;
     border-top: 0.5rem solid black;
     border-bottom: 0.5rem solid black;
+    color: black;
 }
 
 .div-metodologia {
@@ -361,7 +361,7 @@ section {
 }
 
 iframe {
-    max-width: 360px;
+    width: 360px;
     height: 203px;
     overflow: hidden;
     border: 1px solid black;

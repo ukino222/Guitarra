@@ -3,6 +3,7 @@
 footer {
     /* background: rgba(51, 51, 51, 0.9); */
     background: rgb(34, 34, 34);
+    font-family: 'Nova Square', cursive;
 }
 
 footer .contenedor {
