@@ -106,7 +106,8 @@ header .contenedor {
 }
 
 .modalidad {
-    margin-left: 1em;
+    margin-left: .5em;
+    margin-right: .5em;
     color: #fff;
     text-align: center;
     text-shadow: 5px 5px 5px black;
@@ -372,14 +373,17 @@ iframe {
 .icono-wapp {
     float: right;
     position: sticky;
-    top: 90vh;
+    top: 88vh;
     z-index: 100;
+    animation: mianimacion 10s infinite alternate;
+    /* position: relative; */
+    animation-timing-function: ease-in-out;
 }
 
 #wapp {
     height: 48px;
     width: 48px;
-    margin-right: 0.5em;
+    margin-right: 0.8em;
 }  
 
 #wapp:hover {
@@ -387,7 +391,17 @@ iframe {
     cursor: pointer;
 }
   
+/* alternate */
 
+@keyframes mianimacion {
+    0%, 40% {
+        transform: rotate(0deg) ;
+    }
+    
+    60%, 100%{
+        transform: rotate(720deg);
+    }
+}
 
 @media(min-width: 768px){
     /* .sociales{
