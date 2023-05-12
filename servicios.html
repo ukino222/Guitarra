@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/estilos.css">
     <link rel="icon" type="image/x-icon" href="./imagenes/criolla.ico">
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="./JS/service.js"></script>
     <!-- datos de Open Graph -->
     <meta property="og:title" content="CLASES DE MÚSICA" />
     <meta property="og:type" content="website" />
@@ -52,7 +54,40 @@
 
         <section>
           <div class="modalidad">
-            <h2>SERVICIOS QUE BRINDAMOS</h2>
+              <h2>PAGO DE CLASES</h2>
+              <p>¡Es rápido y fácil!</p>
+              <br>
+            <div class="formulario">
+                <p>Seleccione el tipo de clase y la cantidad de sesiones que desea abonar.</p>
+                <p>Cabe aclarar que las clases tienen una duración de 60 minutos.</p>
+                <br>
+                <br>
+                <form>
+                    <label for="tipoClase">Tipo de clase</label>
+                    <br>
+                    <select id="tipoClase" name="tipoClase">
+                        <option value="individual">Clase individual ($2500 por sesión)</option>
+                        <option value="grupal">Clase grupal ($1500 por sesión)</option>
+                        <option value="enLinea">Clase en línea ($2000 por sesión)</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="cantidadSesiones">Cantidad de clases</label>
+                    <br>
+                    <input type="number" id="cantidadSesiones" name="cantidadSesiones" min="1" max="100" value="1">
+                    <br>
+                    <br>
+                    <label for="montoAPagar">Monto a pagar</label>
+                    <br>
+                    <span id="montoAPagar">$0</span>
+                    <br>
+                    <br>
+                    <button type="button" onclick="calcularPrecio()">Calcular monto a pagar</button>
+                    <button type="button" onclick="inicializarMercadoPago()">Pagar con Mercado Pago</button>
+                </form>
+
+            </div>
+
           </div>
         </section>  
     </main>

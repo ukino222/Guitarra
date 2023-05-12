@@ -366,9 +366,9 @@ iframe {
     width: 360px;
     height: 203px;
     overflow: hidden;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 7px;
-    box-shadow:  1px 1px 8px rgb(0, 0, 0);
+    box-shadow:  1px 1px 8px rgb(255, 255, 255);
 }
 
 .icono-wapp {
@@ -377,14 +377,13 @@ iframe {
     top: 88vh;
     z-index: 100;
     animation: mianimacion 10s infinite alternate;
-    /* position: relative; */
     animation-timing-function: ease-in-out;
 }
 
 #wapp {
     height: 48px;
     width: 48px;
-    margin-right: 0.8em;
+    margin-right: 1em;
 }  
 
 #wapp:hover {
@@ -392,7 +391,144 @@ iframe {
     cursor: pointer;
 }
   
-/* alternate */
+
+/* --------- Galería de imágenes -------------- */
+
+.contenedor-slider {
+    width: 320px;
+    height: 180px;
+    position: relative;
+    display: block;
+    margin: 50px auto;
+}
+
+.contenedor-slider p {
+    color: #f3e635;
+}
+
+.img-slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    box-shadow:  1px 1px 8px rgb(255, 255, 255);
+}
+
+ .contenedor-slider a {
+  text-decoration: none;
+  color: #000;
+}
+
+ #btn-prev, #btn-next {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2e2e2e;
+  text-shadow: none;
+  background: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  border-radius: 50%;
+  line-height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+#btn-prev:hover, #btn-next:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+#btn-prev {
+  left: 20px;
+}
+
+#btn-next {
+  right: -20px;
+}
+
+.texto-img {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  background: rgba(51, 51, 51, 0.7);
+  background-size: 10px;
+}
+
+ [id^= "item"] {
+    display: none;
+ }
+
+ .img-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url('/imagenes/estudio-01.jpg');
+    background-size: cover;
+ }
+
+ .img-2 {
+    background: url('/imagenes/estudio-02.jpg');
+    background-size: cover;
+ }
+
+ .img-3 {
+    background: url('/imagenes/patricio-da-rocha-y-las-guitarras-criollas.jpg');
+    background-size: cover;
+ }
+
+ .img-4 {
+    background: url('/imagenes/duo-crespo-tasso.jpg');
+    background-size: 320px 180px;
+ }
+
+*:target ~ .img-1 {
+    opacity: 0;
+}
+
+#orden-1:target ~ .img-1 {
+    opacity: 1;
+}
+
+#orden-2:target ~ .img-2, #orden-3:target ~ .img-3, #orden-4:target ~ .img-4 {
+    z-index: 3;
+    opacity: 1;
+}
+
+/* ------------------ Fin galería de imágenes --------------- -- */
+
+/* ------------------ Formulario de Servicios ------------------ */
+.formulario {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #264663;
+    padding: 2em;
+    border: 3px solid ;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#montoAPagar {
+    color: #f3e635;
+}
+
+textarea {
+    width: 24em;
+    height: 10em;
+    
+}
+
+/* ------------------ Fin Formulario de Servicios ------------------  */
 
 @keyframes mianimacion {
     0%, 40% {

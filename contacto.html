@@ -53,6 +53,43 @@
         <section>
             <div class="modalidad">
              <h2>CONTACTO</h2>
+             <div class="formulario">
+             <form id="contact-form">
+                <label for="nombre">Nombre</label>
+                <br>
+                <input type="text" id="nombre" name="nombre" placeholder="* obligatorio" required>
+                <br>
+                <br>
+                <label for="apellido">Apellido</label>
+                <br>
+                <input type="text" id="apellido" name="apellido" placeholder="* obligatorio" required>
+                <br>
+                <br>
+                <label for="correo">Correo Electrónico</label>
+                <br>
+                <input type="email" id="correo" name="correo" placeholder="* obligatorio" required>
+                <br>
+                <br>
+                <label for="tipo-clase">Tipo de Clase</label>
+                <br>
+                <select id="tipo-clase" name="tipo-clase" required>
+                    <option value="">Selecciona el tipo de clase</option>
+                    <option value="Guitarra Clasica">Guitarra Clasica</option>
+                    <option value="Guitarra Electrica">Guitarra Electrica</option>
+                    <option value="Bajo">Bajo</option>
+                    <option value="Teoría y Armonía">Teoría y Armonía</option>
+                    <option value="Tablatura">Tablatura</option>
+                </select>
+                <br>
+                <br>
+                <label for="mensaje">Mensaje</label>
+                <br>
+                <textarea id="mensaje" name="mensaje" rows="4" maxlength="800" placeholder="Escribí tu mensaje.." required></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+            <script src="./JS/contact.js"></script>
+             </div>   
             </div>
         </section>
     </main>
