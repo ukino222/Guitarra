@@ -543,7 +543,7 @@ iframe {
 
 /* ------------------------ Formularios --------------------------------- */
 .formulario {
-    width: 400px;
+    width: 200px;
     margin: 0 auto;
     background-color: #264663;
     padding: 2em;
@@ -721,6 +721,9 @@ form button:hover {
 @media(min-width: 768px){
     .div-metodologia{
         flex-direction: row;
+    }
+    .formulario {
+        width: 400px;
     }
     input[type=text] {
         width: 100%;
