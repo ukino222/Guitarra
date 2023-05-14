@@ -546,7 +546,7 @@ iframe {
     width: 220px;
     margin: 0 auto;
     background-color: #264663;
-    padding: 0em;
+    padding: 0.8em 0;
     border: 3px solid #fff;
     border-radius: 5px;
     text-align: center;
