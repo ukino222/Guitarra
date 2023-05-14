@@ -553,7 +553,7 @@ iframe {
 }
 
 input[type=text] {
-    width: 100%;
+    width: 50%;
     margin: 0.4em 0;
     padding: 0.7em;
     box-sizing: border-box;
@@ -574,7 +574,7 @@ input[type=text]:hover {
 }
 
 input[type=email] {
-    width: 100%;
+    width: 50%;
     margin: 0.4em 0;
     padding: 0.7em;
     box-sizing: border-box;
@@ -595,7 +595,7 @@ input[type=email]:hover {
 }
 
 #tipo-clase {
-    width: 100%;
+    width: 50%;
     margin: 0.4em 0;
     padding: 0.7em;
     background-color: rgb(220, 221, 219);
@@ -616,7 +616,7 @@ input[type=email]:hover {
 }
 
 textarea {
-    width: 24em;
+    width: 12em;
     margin: 0.6em 0;
     height: 10em;
     padding: 12px 0.7em;
@@ -653,7 +653,7 @@ input[type="submit"]:hover {
 }
 
 #tipoClase {
-    width: 100%;
+    width: 50%;
     margin: 0.4em 0;
     padding: 0.7em;
     background-color: rgb(220, 221, 219);
@@ -721,6 +721,21 @@ form button:hover {
 @media(min-width: 768px){
     .div-metodologia{
         flex-direction: row;
+    }
+    input[type=text] {
+        width: 100%;
+    }
+    input[type=email] {
+        width: 100%;
+    }
+    #tipo-clase {
+        width: 100%;
+    }
+    textarea {
+        width: 24em;
+    }
+    #tipoClase {
+        width: 100%;
     }
 }
 
