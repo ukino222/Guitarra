@@ -22,11 +22,35 @@ body {
     color: white;
 }
 
-.guitarra{
-    /* background-image: url(../imagenes/Partitura.png); */
-    height: 60vh;
-    overflow: hidden;
-    
+section {
+    font-family: 'Nova Square', cursive;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* ------------------------ Header -------------------------------------- */
+
+.capa-blur {
+
+    -webkit-backdrop-filter: blur(0.3rem);
+    backdrop-filter: blur(0.3rem);
+}
+
+.contenedor {
+    width: 98%;
+    margin: auto;
+    text-shadow: 5px 5px 5px black;
+}
+
+header .contenedor {
+    display: table; 
+}
+
+.titulo {
+    float: left;
+    font-size: 25px;
+    margin-top: 12px;
+    font-weight: bolder;
 }
 
 header {
@@ -41,22 +65,52 @@ header {
     z-index: 90;
 }
 
-.capa-blur {
-
-    -webkit-backdrop-filter: blur(0.3rem);
-    backdrop-filter: blur(0.3rem);
+header img {
+    float: left;
+    width: 40px;
+    height: auto;
+    margin: 7px;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
 }
 
-section {
-    font-family: 'Nova Square', cursive;
-    width: 100%;
-    margin-bottom: 25px;
+/* ------------------------ Fin Header ---------------------------------- */
+
+/* ------------------------ Icono animado de Whatsapp ------------------- */
+
+.icono-wapp {
+    float: right;
+    position: sticky;
+    top: 88vh;
+    z-index: 100;
+    animation: mianimacion 10s infinite alternate;
+    animation-timing-function: ease-in-out;
 }
 
-.cuerpo-principal {
-    margin-top: 7em;
-    margin-left: 2em;
+#wapp {
+    height: 48px;
+    width: 48px;
+    margin-right: 1em;
+}  
+
+#wapp:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
+
+@keyframes mianimacion {
+    0%, 40% {
+        transform: rotate(0deg) ;
+    }
+    
+    60%, 100%{
+        transform: rotate(720deg);
+    }
+}
+
+/* ------------------------ Fin Icono animado de Whatsapp --------------- */
+
+/* ------------------------ Presentación -------------------------------- */
+
 #presentacion {   
     background-image: url(../imagenes/guitarra-header.jpg);
     width: 100%;
@@ -67,25 +121,6 @@ section {
     background-position:center;
     color: #fff;
     text-shadow: 5px 5px 5px black;
-}
-
-.titulo {
-    float: left;
-    font-size: 25px;
-    margin-top: 12px;
-    font-weight: bolder;
-}
-
-header img {
-    float: left;
-    width: 40px;
-    height: auto;
-    margin: 7px;
-    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
-}
-
-header .contenedor {
-    display: table; 
 }
 
 #presentacion h2 {
@@ -105,6 +140,15 @@ header .contenedor {
     padding-top: 80px;
 }
 
+.guitarra{
+    height: 60vh;
+    overflow: hidden;
+}
+
+/* ------------------------ Fin Presentación ---------------------------- */
+
+/* ------------------------ Modalidad ----------------------------------- */
+
 .modalidad {
     margin-left: .5em;
     margin-right: .5em;
@@ -114,21 +158,10 @@ header .contenedor {
     background: #000000;
     padding-top: 5em;
     padding-bottom: 5em;
-    border: 3px solid ;
+    border: 3px solid;
     border-radius: 3px;
     background-image: linear-gradient(to right, rgb(28, 28, 42) , rgb(34, 34, 34));
     
-}
-
-.cajita{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.cajas{
-    width: 50%;
-    /* margin-left: 5px; */
 }
 
 .modalidad h2 {
@@ -137,39 +170,33 @@ header .contenedor {
     text-align: center;
 }
 
-.contenedor {
-    width: 98%;
-    margin: auto;
-    /* background-color: rgba(39, 39, 39, 0.3);
-    color: whitesmoke;
-    border-radius: 20px; */
-    text-shadow: 5px 5px 5px black;
+.cajita{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.contenedor-bio img {
-    max-width: 30%;
-    height: auto;
-    float: left;
-    margin: 0.9375em;
-    border: 2px solid;
+.cajita h3 {
+    color: #f3e635;
+    padding-top: 1em;
+}
+
+.cajas{
+    width: 100%;
+    height: 6.25em;
+    border: 3px solid;
     border-radius: 3px;
+    background-color: #264663;
+    margin: 0.5em 0.5em 0 0.5em;
 }
 
-.contenedor-bio p {
-    text-align: justify;
-    padding: 0 1.8em;
-}
 
-.section-gris{
+/* ------------------------ Fin Modalidad ------------------------------- */
+
+/* ------------------------ Metodología --------------------------------- */
+
+.section-yellow{
     background-image: linear-gradient(to right, rgb(236, 207, 109) , rgb(83, 63, 6));
-    /* background-color: rgb(231, 202, 121); */
-    /* display: grid; */
-    /* grid-template-rows: 1fr 20fr; */
-    
-}
-
-.separador1{
-    height: 2.5rem;
 }
 
 .titulo-seccion{
@@ -190,9 +217,6 @@ header .contenedor {
     flex-direction: column;
     text-align: center;
     padding: 20px;
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr;  */
-    /* align-content: space-around; */
 }    
 
 .cajas-imagenes {
@@ -210,8 +234,6 @@ header .contenedor {
     flex: 25%;
 }
 
-/* ------- */
-
 .cajas-imagenes:hover{
     cursor: pointer;
 }
@@ -221,7 +243,6 @@ header .contenedor {
     height: auto;
     border-radius: 3px;
 }
-
 
 .intro{
     height: 270px;
@@ -260,6 +281,10 @@ header .contenedor {
     visibility: visible;
 }
 
+/* ------------------------ Fin Metodología ----------------------------- */
+
+/* ------------------------ Círculos de Técnicas ------------------------ */
+
 .tecnicas {
     display: flex;
     flex-wrap: wrap;
@@ -270,13 +295,6 @@ header .contenedor {
     overflow: hidden;
     margin: 20px;
 }
-
-
-/* 
-.tecnicas figure{
-    padding: 10px;
-    overflow: hidden;
-} */
 
 .cont-img-tecnicas{
     width: 160px;
@@ -292,17 +310,16 @@ header .contenedor {
 .img-tecnicas {
     width: 100%;
     height: 100%;
-    /* padding: 6px; */
     transition: 0.8s;
     object-fit: cover;
 }
 
 .tecnicas p {
+    font-size: 1.4em;
+    margin-top: -100px;
     opacity: 0;
     transition: 1.8s;
-    margin-top: -100px;
     color: #fff;
-    font-size: 1.4em;
     user-select: none;
 }
 
@@ -315,17 +332,27 @@ header .contenedor {
     opacity: 100%;  
 }
 
-.img-tecnicas:hover + p {
-    opacity: 100%;  
+/* ------------------------ Fin Círculos de Técnicas  ------------------- */
+
+/* ------------------------ Acerca de mí / Biografía -------------------- */
+
+.contenedor-bio img {
+    max-width: 30%;
+    height: auto;
+    float: left;
+    margin: 0.9375em;
+    border: 2px solid;
+    border-radius: 3px;
 }
-    
-    
-.dh{
-    width: 200px;
-    height: 150px;
-    overflow: hidden;
-    margin: 20px;
+
+.contenedor-bio p {
+    text-align: justify;
+    padding: 0 1.8em;
 }
+
+/* ------------------------ Fin Acerca de mí / Biografía ---------------- */
+
+/* ------------------------ Galería de multimedia ----------------------- */
 
 .modalidad ul {
     padding: 1.80em;
@@ -371,28 +398,6 @@ iframe {
     box-shadow:  1px 1px 8px rgb(255, 255, 255);
 }
 
-.icono-wapp {
-    float: right;
-    position: sticky;
-    top: 88vh;
-    z-index: 100;
-    animation: mianimacion 10s infinite alternate;
-    animation-timing-function: ease-in-out;
-}
-
-#wapp {
-    height: 48px;
-    width: 48px;
-    margin-right: 1em;
-}  
-
-#wapp:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-}
-  
-
-/* --------- Galería de imágenes -------------- */
 
 .contenedor-slider {
     width: 320px;
@@ -458,7 +463,6 @@ iframe {
 
 .texto-img {
   position: absolute;
-  color: #fff;
   bottom: 0;
   padding: 0;
   margin: 0;
@@ -489,7 +493,37 @@ iframe {
 
  .img-4 {
     background: url('/imagenes/duo-crespo-tasso.jpg');
-    background-size: 320px 180px;
+    background-size: cover;
+ }
+
+ .img-5 {
+    background: url('/imagenes/concierto-del-curso-tango-para-musicos.jpg');
+    background-size: cover;
+ }
+
+ .img-6 {
+    background: url('/imagenes/duo-eugenia-giro-federico-tasso.jpg');
+    background-size: cover;
+ }
+
+ .img-7 {
+    background: url('/imagenes/coro-mvp.jpg');
+    background-size: cover;
+ }
+
+ .img-8 {
+    background: url('/imagenes/el-rechazo.jpg');
+    background-size: cover;
+ }
+
+ .img-9 {
+    background: url('/imagenes/vocal-vox-animae.jpg');
+    background-size: cover;
+ }
+
+ .img-10 {
+    background: url('/imagenes/vocal-vox-animae-02.jpg');
+    background-size: cover;
  }
 
 *:target ~ .img-1 {
@@ -500,50 +534,191 @@ iframe {
     opacity: 1;
 }
 
-#orden-2:target ~ .img-2, #orden-3:target ~ .img-3, #orden-4:target ~ .img-4 {
+#orden-2:target ~ .img-2, #orden-3:target ~ .img-3, #orden-4:target ~ .img-4 , #orden-5:target ~ .img-5 , #orden-6:target ~ .img-6 , #orden-7:target ~ .img-7 , #orden-8:target ~ .img-8 , #orden-9:target ~ .img-9 , #orden-10:target ~ .img-10 {
     z-index: 3;
     opacity: 1;
 }
 
-/* ------------------ Fin galería de imágenes --------------- -- */
+/* ------------------------ Fin galería multimedia ---------------------- */
 
-/* ------------------ Formulario de Servicios ------------------ */
+/* ------------------------ Formularios --------------------------------- */
 .formulario {
     width: 400px;
     margin: 0 auto;
     background-color: #264663;
     padding: 2em;
-    border: 3px solid ;
+    border: 3px solid #fff;
     border-radius: 5px;
     text-align: center;
+}
+
+input[type=text] {
+    width: 100%;
+    margin: 0.4em 0;
+    padding: 0.7em;
+    box-sizing: border-box;
+    background-color: rgb(220, 221, 219);
+    outline: none;
+    transition: 0.2s;
+    border: 2px solid rgb(36, 59, 65);
+    border-radius: 3px;
+}
+
+input[type=text]:focus {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(18, 219, 35);
+}
+
+input[type=text]:hover {
+    border: 2px solid rgb(18, 219, 35);
+}
+
+input[type=email] {
+    width: 100%;
+    margin: 0.4em 0;
+    padding: 0.7em;
+    box-sizing: border-box;
+    background-color: rgb(220, 221, 219);
+    border: 2px solid rgb(36, 59, 65);
+    border-radius: 3px;
+    transition: 0.2s;
+    outline: none;
+}
+
+input[type=email]:focus {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(18, 219, 35);
+}
+
+input[type=email]:hover {
+    border: 2px solid rgb(18, 219, 35);
+}
+
+#tipo-clase {
+    width: 100%;
+    margin: 0.4em 0;
+    padding: 0.7em;
+    background-color: rgb(220, 221, 219);
+    outline: none;
+    transition: 0.2s;
+    border: 2px solid rgb(36, 59, 65);
+    border-radius: 3px;
+}
+
+#tipo-clase:focus {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(18, 219, 35);
+}
+
+#tipo-clase:hover {
+    border: 2px solid rgb(18, 219, 35);
+    cursor: pointer;
+}
+
+textarea {
+    width: 24em;
+    margin: 0.6em 0;
+    height: 10em;
+    padding: 12px 0.7em;
+    box-sizing: border-box;
+    background-color: rgb(220, 221, 219);
+    outline: none;
+    transition: 0.2s;
+    border: 2px solid rgb(36, 59, 65);
+    border-radius: 3px;
+}
+
+textarea:focus {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(18, 219, 35);
+}
+
+textarea:hover {
+    border: 2px solid rgb(18, 219, 35);
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+#tipoClase {
+    width: 100%;
+    margin: 0.4em 0;
+    padding: 0.7em;
+    background-color: rgb(220, 221, 219);
+    outline: none;
+    transition: 0.2s;
+    border: 2px solid rgb(36, 59, 65);
+    border-radius: 3px;
+}
+
+#tipoClase:focus {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(18, 219, 35);
+}
+
+#tipoClase:hover {
+    border: 2px solid rgb(18, 219, 35);
+    cursor: pointer;
+}
+
+#cantidadSesiones {
+    width: 40%;
+    margin: 0.4em 0;
+    padding: 0.7em;
+    text-align: center;
+    background-color: rgb(220, 221, 219);
+    outline: none;
+    transition: 0.2s;
+    border: 2px solid rgb(36, 59, 65);
+    border-radius: 3px;
+}
+
+#cantidadSesiones:focus {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(18, 219, 35);
+}
+
+#cantidadSesiones:hover {
+    border: 2px solid rgb(18, 219, 35);
+}
+
+form button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    margin: 0.4em 0;
+    padding: 0.7em 1.4em;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #3e8e41;
 }
 
 #montoAPagar {
     color: #f3e635;
 }
 
-textarea {
-    width: 24em;
-    height: 10em;
-    
-}
+/* ----------------------------- Fin Formularios ------------------------ */
 
-/* ------------------ Fin Formulario de Servicios ------------------  */
-
-@keyframes mianimacion {
-    0%, 40% {
-        transform: rotate(0deg) ;
-    }
-    
-    60%, 100%{
-        transform: rotate(720deg);
-    }
-}
+/* ----------------------------- Media Query ---------------------------- */
 
 @media(min-width: 768px){
-    /* .sociales{
-        width: auto;
-    } */
     .div-metodologia{
         flex-direction: row;
     }
@@ -563,7 +738,14 @@ textarea {
     .contenedor {
         width: 1000px;
     }
-   
 }
 
+@media(min-width: 480px){
+    .cajas{
+        width: 46%;
+        margin: 0.5em 0.5em 0 0.5em;
+    }
+}
+
+/* ----------------------------- Fin Media Query -------------------------------- */
 
