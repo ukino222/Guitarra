@@ -546,7 +546,7 @@ iframe {
     width: 220px;
     margin: 0 auto;
     background-color: #264663;
-    padding: 2em;
+    padding: 0em;
     border: 3px solid #fff;
     border-radius: 5px;
     text-align: center;
@@ -617,7 +617,7 @@ input[type=email]:hover {
 
 textarea {
     width: 16em;
-    margin: 0.6em 0;
+    margin: 0.2em 0;
     height: 10em;
     padding: 12px 0.7em;
     box-sizing: border-box;
@@ -724,6 +724,7 @@ form button:hover {
     }
     .formulario {
         width: 400px;
+        padding: 2em;
     }
     input[type=text] {
         width: 100%;
@@ -736,6 +737,7 @@ form button:hover {
     }
     textarea {
         width: 24em;
+        margin: 0.6em 0;
     }
     #tipoClase {
         width: 100%;
